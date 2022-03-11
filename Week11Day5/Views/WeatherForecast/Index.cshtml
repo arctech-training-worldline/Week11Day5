@@ -1,0 +1,23 @@
+﻿@using Week11Day5.Models
+@model FullWeatherForecast
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Weather forecast by Worldline International</h1>
+<p>
+    Dear employees, this is the weather forecast for today.
+
+    @Model.RainForecast
+
+    @if (@Model.Humidity > 50)
+    {
+        <div>There is too much humidity today of @Model.Humidity</div>
+    }
+    else
+    {
+        <div>There is less humidity today of @Model.Humidity. So we can work 2 hours extra in office</div>           
+    }
+</p>
+
